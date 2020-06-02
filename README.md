@@ -88,11 +88,11 @@ invertible.
 
 makeCacheMatrix <- function(x = matrix()) {
   j <- NULL
-  set <- function(y){
+  set <- function(y) {
     x <<- y
     j <<- NULL
   }
-  get <- function()x
+  get <- function() x
   setInverse <- function(inverse) j <<- inverse
   getInverse <- function() j 
   list(set = set, get = get, 
