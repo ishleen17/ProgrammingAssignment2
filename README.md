@@ -86,6 +86,7 @@ function in R. For example, if `X` is a square invertible matrix, then
 For this assignment, assume that the matrix supplied is always
 invertible.
 
+```
 makeCacheMatrix <- function(x = matrix()) {
   j <- NULL
   set <- function(y) {
@@ -99,7 +100,9 @@ makeCacheMatrix <- function(x = matrix()) {
        setInverse = setInverse, 
        getInverse = getInverse)
 }
+```
 
+```
 cacheSolve <- function(x, ...) {
   j <- x$getInverse()
   if(!is.null(j)){
@@ -111,3 +114,4 @@ cacheSolve <- function(x, ...) {
   x$setInverse(j)
   j
 }
+```
